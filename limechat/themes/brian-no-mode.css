@@ -1,0 +1,79 @@
+html {
+  font-family: 'Monaco';
+  font-size: 9pt;
+  background-color: #000;
+  color: #e0e0e0;
+}
+body {
+  padding: 0 100px 0 50px;
+}
+
+div.line[_type=mode] { display: none; }
+
+.url { color: #70b0ff; }
+.address {}
+.highlight {
+  font-weight: bold;
+  color: #f8ff80;
+}
+
+.line { 
+  padding: 4px 0 6px 0; 
+}
+.line[alternate=even] { }
+.line[alternate=odd] {}
+.line[highlight=true] {}
+
+.time { 
+  color: #505050;
+  font-size: 83%;
+}
+.place { color: #3387bc; }
+
+.sender[type=normal] { 
+  color: #3eb7b3; 
+  display: inline-block;
+  margin-right: 20px;
+  text-align: right;
+  vertical-align: top;
+  width: 130px;
+}
+.sender[type=myself] { 
+  color: #79bdef;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: right;
+  vertical-align: top;
+  width: 130px;
+}
+
+.line[highlight=true] .message { 
+  border: 1px dotted #a0a0a0;
+  background-color: #1e1e1e;
+  padding: 4px 7px;
+}
+
+.message { 
+  display: inline-block; 
+  width: 900px; 
+}
+.message[type=privmsg] {}
+.message[type=notice] { color: #888; }
+.message[type=action] { color: #afdd6a;}
+
+.message[type=system], .message[type=join], .message[type=part], .message[type=kick],
+.message[type=quit], .message[type=kill], .message[type=nick], .message[type=mode],
+.message[type=topic], .message[type=invite], .message[type=wallops] {
+  color: #65b042;
+}
+.message[type=reply] { color: #509036; }
+
+.message[type=error], .message[type=error_reply] { color: #f67b37; }
+.message[type=dcc_send_send] { color: #c5af75; }
+.message[type=dcc_send_receive] { color: #f9ee98; }
+.message[type=debug_send] { color: #8996a8; }
+.message[type=debug_receive] { color: #afc4db; }
+
+div[type=action] span.sender {
+  margin-right: 7px;
+}
